@@ -16,9 +16,29 @@
         <input type="radio" name="tz" value="ala">  Alaska Standard Time <br>
         <input type="radio" name="tz" value="haw">  Hawaii-Aleutian Standard Time <br>
     
-        <button type="button" value="submit">Submit</button>
+        <button type="button" value="submit" onclick="readForm()">Submit</button>
     </form>
-    <div id="ma_vie"></div>
+    
+    <div id="result"></div>
+
+    <script type="text/javascript">
+    
+        function readForm(){
+            var radioButtons = document.getElementsByName ("tz");
+
+            var output = radioButtons[0].value;
+            
+            for (var i = 0; i < radioButtons.length; i++){
+                if (radioButtons[i].checked == true){
+                    (radioButtons[i].value)
+               };
+            };
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+    
+    </script>
 
 
 </body>
